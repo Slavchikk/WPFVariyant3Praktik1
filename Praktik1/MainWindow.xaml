@@ -1,0 +1,84 @@
+﻿<Window x:Class="Praktik1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Praktik1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Grid.Row="1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock Text="Перевод в различные виды измерения" Style="{StaticResource TBStyle}"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>Выберите фигуру для подсчета площади:</TextBlock>
+                    <RadioButton Name="RBTreagle" Margin="15,0,0,0" Checked="RBKmMeters_Checked">Перевод из километров и метров</RadioButton>
+                    <RadioButton Name="RBParal" Margin="10,0,0,0" Checked="RBOtherEqual_Checked">Перевод из других единиц измерения</RadioButton>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Name="SPEnterRmMeters" Visibility="Collapsed" Margin="20">
+                <WrapPanel Orientation="Horizontal">
+                    <TextBlock Margin="10,0,15,0">Введите киллометры</TextBlock>
+                    <TextBox Name="TBKm" Width="100"/>
+                    <TextBlock Margin="30,0,15,0">Введите метры</TextBlock>
+                    <TextBox Name="TBMetters" Width="100"/>
+                    <Button Style="{StaticResource BTEnter}" Margin="30,0,15,0" Content="Далее" Click="Btn_enter"/>
+                    <TextBlock Name ="TBEDIz"  Margin="15,15,0,0" Visibility="Collapsed">Выберите единицу измерения для перевода</TextBlock>
+                    <ComboBox Name="CBTreagle" Width="150" HorizontalAlignment="Left" Margin="20,15,0,0" Visibility="Collapsed" IsEnabled="False" SelectionChanged="CBTreagle_SelectionChanged">
+                        <ComboBoxItem>Мили</ComboBoxItem>
+                        <ComboBoxItem>Версты</ComboBoxItem>
+                        <ComboBoxItem>Ярды</ComboBoxItem>
+                        <ComboBoxItem>Дюймы</ComboBoxItem>
+                        <ComboBoxItem>Футы</ComboBoxItem>
+                    </ComboBox>
+                </WrapPanel>
+            </StackPanel>
+            
+            <StackPanel Name ="SPEnterOthersEqual" Visibility="Collapsed" Margin="20">
+                <WrapPanel Orientation="Horizontal">
+                    <TextBlock  Margin="15,15,0,0">Выберите единицу измерения для перевода</TextBlock>
+                    <ComboBox Name="CBTreagles" Width="150" HorizontalAlignment="Left" Margin="20,15,0,0" Visibility="Visible" IsEnabled="True" SelectionChanged="CBTreagle_SelectionChangedFirst">
+                        <ComboBoxItem>Мили</ComboBoxItem>
+                        <ComboBoxItem>Версты</ComboBoxItem>
+                        <ComboBoxItem>Ярды</ComboBoxItem>
+                        <ComboBoxItem>Дюймы</ComboBoxItem>
+                        <ComboBoxItem>Футы</ComboBoxItem>
+                    </ComboBox>
+                    <TextBox Visibility="Collapsed" Name="TBFromOther" Width="100"  Margin="30,15,15,0"  />
+                    <Button Visibility="Collapsed" Name ="BtnFromother"  Style="{StaticResource BTEnter}" Margin="30,15,15,0"  Content="Ввести" Click="Btn_enters"/>
+                </WrapPanel>
+
+            </StackPanel>
+            
+        </Grid>
+
+
+        <Grid Grid.Row="2">
+            <StackPanel Name ="SPOutputKm" Visibility="Collapsed" Margin="0">
+               
+                    <TextBlock Margin="0,0,0,0" Style="{StaticResource TBStyle}">Результат</TextBlock>
+                <WrapPanel Orientation="Horizontal">
+                    <TextBlock  Style="{StaticResource BtnItog}" Name="TBlResultKm"> Киллометры</TextBlock>
+                    <TextBlock  Style="{StaticResource BtnItog}" Name="TBlResultMeters">Метры</TextBlock>
+                </WrapPanel>
+            </StackPanel>
+            <StackPanel Name ="SPOutputOthers" Visibility="Collapsed" Margin="0">
+
+                <TextBlock Margin="0,0,0,0" Style="{StaticResource TBStyle}">Результат</TextBlock>
+                <WrapPanel Orientation="Horizontal">
+                     <TextBlock  Style="{StaticResource BtnItog}" Name="TBlResultOthers">Результат</TextBlock>
+                </WrapPanel>
+            </StackPanel>
+        </Grid>
+        
+        
+    </Grid>
+         
+</Window>
