@@ -26,9 +26,9 @@
             <StackPanel Name="SPEnterRmMeters" Visibility="Collapsed" Margin="20">
                 <WrapPanel Orientation="Horizontal">
                     <TextBlock Margin="10,0,15,0">Введите киллометры</TextBlock>
-                    <TextBox Name="TBKm" Width="100"/>
+                    <TextBox PreviewTextInput="checkIfInputDigits" Name="TBKm" Width="100"/>
                     <TextBlock Margin="30,0,15,0">Введите метры</TextBlock>
-                    <TextBox Name="TBMetters" Width="100"/>
+                    <TextBox PreviewTextInput="checkIfInputDigits"  Name="TBMetters" Width="100"/>
                     <Button Style="{StaticResource BTEnter}" Margin="30,0,15,0" Content="Далее" Click="Btn_enter"/>
                     <TextBlock Name ="TBEDIz"  Margin="15,15,0,0" Visibility="Collapsed">Выберите единицу измерения для перевода</TextBlock>
                     <ComboBox Name="CBTreagle" Width="150" HorizontalAlignment="Left" Margin="20,15,0,0" Visibility="Collapsed" IsEnabled="False" SelectionChanged="CBTreagle_SelectionChanged">
@@ -51,7 +51,7 @@
                         <ComboBoxItem>Дюймы</ComboBoxItem>
                         <ComboBoxItem>Футы</ComboBoxItem>
                     </ComboBox>
-                    <TextBox Visibility="Collapsed" Name="TBFromOther" Width="100"  Margin="30,15,15,0"  />
+                    <TextBox PreviewTextInput="checkIfInputDigits" Visibility="Collapsed" Name="TBFromOther" Width="100"  Margin="30,15,15,0"  />
                     <Button Visibility="Collapsed" Name ="BtnFromother"  Style="{StaticResource BTEnter}" Margin="30,15,15,0"  Content="Ввести" Click="Btn_enters"/>
                 </WrapPanel>
 

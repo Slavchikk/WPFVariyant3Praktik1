@@ -20,11 +20,16 @@ namespace Praktik1
     /// </summary>
     public partial class MainWindow : Window
     {
+
+    
+
         string unit = "";
         public MainWindow()
         {
             InitializeComponent();
         }
+
+
 
         private void RBKmMeters_Checked(object sender, RoutedEventArgs e)
         {
@@ -173,6 +178,11 @@ namespace Praktik1
                     break;
 
             }
+        }
+
+        private void checkIfInputDigits(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = "0123456789 ,".IndexOf(e.Text) < 0;
         }
     }
 }
