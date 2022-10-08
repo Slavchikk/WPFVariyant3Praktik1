@@ -62,33 +62,33 @@ namespace Praktik1
                     double metters = Convert.ToDouble(TBKm.Text) * 1000 + Convert.ToDouble(TBMetters.Text);
                     double milles = Math.Round(metters / 1609.34, 5);
                     SPOutputOthers.Visibility = Visibility.Visible;
-                    TBlResultOthers.Text = Convert.ToString(milles);
+                    TBlResultOthers.Text = Convert.ToString(milles) +  " Миль";
                     break;
                 case 1:
                     metters = Convert.ToDouble(TBKm.Text) * 1000 + Convert.ToDouble(TBMetters.Text);
                     double verst = Math.Round(metters / 1066.8, 5);
                     SPOutputOthers.Visibility = Visibility.Visible;
-                    TBlResultOthers.Text = Convert.ToString(verst);
+                    TBlResultOthers.Text = Convert.ToString(verst) + " Верст";
                     break;
                 case 2:
                     metters = Convert.ToDouble(TBKm.Text) * 1000 + Convert.ToDouble(TBMetters.Text);
                     double yards = Math.Round(metters * 1.09361, 5);
                     SPOutputOthers.Visibility = Visibility.Visible;
-                    TBlResultOthers.Text = Convert.ToString(yards);
+                    TBlResultOthers.Text = Convert.ToString(yards) + " Ярдов";
                     break;
                 case 3:
 
                     metters = Convert.ToDouble(TBKm.Text) * 1000 + Convert.ToDouble(TBMetters.Text);
                     double dyim = Math.Round(metters * 39.3701, 5);
                     SPOutputOthers.Visibility = Visibility.Visible;
-                    TBlResultOthers.Text = Convert.ToString(dyim);
+                    TBlResultOthers.Text = Convert.ToString(dyim) + " Дюймов";
                     break;
                 case 4:
 
                     metters = Convert.ToDouble(TBKm.Text) * 1000 + Convert.ToDouble(TBMetters.Text);
                     double futs = Math.Round(metters * 3.28084, 5);
                     SPOutputOthers.Visibility = Visibility.Visible;
-                    TBlResultOthers.Text = Convert.ToString(futs);
+                    TBlResultOthers.Text = Convert.ToString(futs) + " Футов";
                     break;
             }
         }
@@ -137,8 +137,8 @@ namespace Praktik1
                     metters = metters - km * 1000;
                     metters = Math.Round(metters, 5);
                     SPOutputKm.Visibility = Visibility.Visible;
-                    TBlResultKm.Text = km.ToString();
-                    TBlResultMeters.Text = metters.ToString();
+                    TBlResultKm.Text = km.ToString() + " Километров";
+                    TBlResultMeters.Text = metters.ToString() + " Метров";
                     break;
                 case "Версты":
                     metters = Convert.ToDouble(TBFromOther.Text) * 1066.8;
@@ -146,8 +146,8 @@ namespace Praktik1
                     metters = metters - km * 1000;
                     metters = Math.Round(metters, 5);
                     SPOutputKm.Visibility = Visibility.Visible;
-                    TBlResultKm.Text = km.ToString();
-                    TBlResultMeters.Text = metters.ToString();
+                    TBlResultKm.Text = km.ToString() + " Километров";
+                    TBlResultMeters.Text = metters.ToString() + " Метров";
                     break;
                 case "Ярды":
                     metters = Convert.ToDouble(TBFromOther.Text) / 1.09361;
@@ -155,8 +155,8 @@ namespace Praktik1
                     metters = metters - km * 1000;
                     metters = Math.Round(metters, 5);
                     SPOutputKm.Visibility = Visibility.Visible;
-                    TBlResultKm.Text = km.ToString();
-                    TBlResultMeters.Text = metters.ToString();
+                    TBlResultKm.Text = km.ToString() + " Километров" ;
+                    TBlResultMeters.Text = metters.ToString() + " Метров";
                     break;
                 case "Дюймы":
                     metters = Convert.ToDouble(TBFromOther.Text) / 39.3701;
@@ -164,8 +164,8 @@ namespace Praktik1
                     metters = metters - km * 1000;
                     metters = Math.Round(metters, 5);
                     SPOutputKm.Visibility = Visibility.Visible;
-                    TBlResultKm.Text = km.ToString();
-                    TBlResultMeters.Text = metters.ToString();
+                    TBlResultKm.Text = km.ToString() + " Километров";
+                    TBlResultMeters.Text = metters.ToString() + " Метров";
                     break;
                 case "Фунты":
                     metters = Convert.ToDouble(TBFromOther.Text) / 3.28084;
@@ -173,8 +173,8 @@ namespace Praktik1
                     metters = metters - km * 1000;
                     metters = Math.Round(metters, 5);
                     SPOutputKm.Visibility = Visibility.Visible;
-                    TBlResultKm.Text = km.ToString();
-                    TBlResultMeters.Text = metters.ToString();
+                    TBlResultKm.Text = km.ToString() + " Километров";
+                    TBlResultMeters.Text = metters.ToString() + " Метров";
                     break;
 
             }

@@ -12,31 +12,37 @@
                 <Setter Property="VerticalAlignment" Value="Center"/>
                 <Setter Property="Foreground" Value="#FF2AA6DA"/>
             </Style.Setters>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="FontSize" Value="24"/>
-                    <Setter Property="Foreground" Value="Red"/>
-                </Trigger>
-            </Style.Triggers>
+           
         </Style>
-        <Style x:Key="BTEnter" TargetType="Button">
-            <Setter Property="Background" Value="AliceBlue"/>
-            <Setter Property="Foreground" Value="BlueViolet"/>
-            <Setter Property="Width" Value="50"/>
-            <Setter Property="BorderBrush" Value="AliceBlue"/>
-
-        </Style>
+        
         <Style TargetType="TextBox">
             <Setter Property="Height" Value="30"/>
 
             <Setter Property="Foreground" Value="Black"/>
         </Style>
-
+        <Style TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Foreground" Value="Red"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
         <Style x:Key="BtnItog" TargetType="TextBlock">
             <Setter Property="Width" Value="150"/>
             <Setter Property="Height" Value="40"/>
             
         </Style>
-        
+        <ControlTemplate x:Key="CTButon" TargetType="Button">
+            <Border CornerRadius="15,15,15,15" BorderBrush="Pink" BorderThickness="2"
+                    Background="LightBlue" Width="100">
+                <ContentControl Content="{TemplateBinding Content}" HorizontalAlignment="Center" Margin="10"/>
+            </Border>
+        </ControlTemplate>
     </Application.Resources>
 </Application>
